@@ -6,6 +6,12 @@
 
 `npm start`
 
+## Instructions
+
+- Look at the components you have been given
+- Practice `useEffect`
+- Implement `react-router` to deliver on the deliverables
+
 ## Deliverables
 
 - A user can vist a "/" route (Dashboard) that shows a list of 50 people from https://randomuser.me/api/ and an empty hired list
