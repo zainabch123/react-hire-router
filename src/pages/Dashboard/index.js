@@ -6,8 +6,10 @@ function Dashboard(props) {
 
   const [people, setPeople] = useState([])
 
+  console.log({ people })
+
   useEffect(() => {
-    fetch("https://swapi.dev/api/people")
+    fetch("https://randomuser.me/api/?results=50")
       .then(res => res.json())
       .then(data => setPeople(data.results))
   }, [])

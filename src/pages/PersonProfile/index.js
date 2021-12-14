@@ -16,14 +16,6 @@ function PersonProfile(props) {
       const { person } = location.state
 
       setPerson(person)
-    } else {
-      const { pathname } = location
-
-      const id = pathname.substring(pathname.lastIndexOf("/" + 1))
-
-      fetch(`https://swapi.dev/api/people/${id}`)
-        .then(res => res.json())
-        .then(data => setPerson(data))
     }
   }, [location])
 
@@ -31,7 +23,9 @@ function PersonProfile(props) {
 
   return (
     <article>
-      <h2>{person.name}</h2>
+      <h2>
+        {person.name.first} {person.name.last}
+      </h2>
       <HireForm person={person} hireAPerson={hireAPerson} />
     </article>
   )
