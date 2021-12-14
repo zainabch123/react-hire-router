@@ -22,4 +22,4 @@
 ## Challenges
 
 - A user can click "Edit" in the hired column
-- A user can edit the wage of the hired person AND be redirected to the dashboard and see those changes.
+- A user can edit the page of the hired person AND be redirected to the dashboard and see those changes.
