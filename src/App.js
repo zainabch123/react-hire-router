@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react"
+import { Route, Routes, useNavigate } from "react-router"
+import { Link } from "react-router-dom"
+import Dashboard from "./pages/Dashboard"
+import PersonProfile from "./pages/PersonProfile"
+import "./styles.css"
 
-function App() {
+export default function App() {
+  const [hiredPeople, setHiredPeople] = useState([])
+
+  console.log({ hiredPeople })
+
+  const navigate = useNavigate()
+
+  function hireAPerson(person) {
+    setHiredPeople([...hiredPeople, person])
+    navigate("/")
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header>
+        <h1>Hire Your Team</h1>
+        <nav>
+          <ul>
+            <Link to="/">Dashboard</Link>
+          </ul>
+        </nav>
       </header>
-    </div>
-  );
+      <Routes>
+        <Route
+          path="/view/:id"
+          element={<PersonProfile hireAPerson={hireAPerson} />}
+        />
+        <Route
+          path="/"
+          element={<Dashboard hiredPeople={hiredPeople} />}
+        />
+      </Routes>
+    </>
+  )
 }
-
-export default App;
