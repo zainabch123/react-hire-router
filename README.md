@@ -19,7 +19,7 @@
 - A user can vist a "/view/:id" route to view a person's profile
 - When a user clicks "Hire" they should be redirected to the dashboard AND see the person they've hired in the hired column
 
-## Challenges
+## Extensions
 
 - A user can click "Edit" in the hired column
 - A user can edit the page of the hired person AND be redirected to the dashboard and see those changes.
