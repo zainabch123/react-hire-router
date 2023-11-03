@@ -1,5 +1,5 @@
-import { useState } from "react"
-import HireForm from "./components/HireForm"
+import { useState } from 'react'
+import HireForm from './components/HireForm'
 
 function PersonProfile(props) {
   const [person, setPerson] = useState(null)
