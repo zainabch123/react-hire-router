@@ -10,7 +10,7 @@
 - Look at the components you have been given
 - Practice `useEffect`
 - Implement React Router (package name: `react-router-dom`) to deliver on the deliverables
-- Use the official [React Router documentation](https://v5.reactrouter.com/web/guides/quick-start) to help you
+- Use the official [React Router documentation](https://reactrouter.com/en/main) to help you
 
 ## Deliverables
 
