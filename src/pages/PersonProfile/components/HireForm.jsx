@@ -7,11 +7,13 @@ function HireForm({person, hiredPeople, setHiredPeople}) {
 
   function handleSubmit(event) {
     event.preventDefault()
+    person.wage = wage
     hiredPeople.includes(person) 
     ? console.log("already hired")
     : setHiredPeople([...hiredPeople, person]) 
-
   }
+
+  console.log("hired people", hiredPeople)
 
   return (
     <form onSubmit={handleSubmit}>
