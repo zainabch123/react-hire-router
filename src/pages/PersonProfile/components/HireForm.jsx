@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-function HireForm({person, hiredPeople, setHiredPeople}) {
-  const [wage, setWage] = useState(0);
+function HireForm({person, hiredPeople, setHiredPeople, wage, setWage}) {
   const navigate = useNavigate();
 
   function handleSubmit(event) {

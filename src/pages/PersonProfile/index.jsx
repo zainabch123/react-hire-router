@@ -3,7 +3,7 @@ import HireForm from './components/HireForm'
 import { useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 
-function PersonProfile({people, hiredPeople, setHiredPeople}) {
+function PersonProfile({people, hiredPeople, setHiredPeople, wage, setWage}) {
   const [person, setPerson] = useState(null);
   const params = useParams();
 
@@ -20,7 +20,7 @@ function PersonProfile({people, hiredPeople, setHiredPeople}) {
       <h2>
         {person.name.first} {person.name.last}
       </h2>
-      <HireForm person={person} setHiredPeople={setHiredPeople} hiredPeople={hiredPeople}/>
+      <HireForm person={person} setHiredPeople={setHiredPeople} hiredPeople={hiredPeople} wage={wage} setWage={setWage}/>
     </article>
   );
 }
