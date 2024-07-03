@@ -1,10 +1,19 @@
 import { useState } from 'react'
 import HireForm from './components/HireForm'
+import { useParams } from 'react-router-dom';
+import { useEffect } from 'react';
 
-function PersonProfile(props) {
-  const [person, setPerson] = useState(null)
+function PersonProfile({people}) {
+  const [person, setPerson] = useState(null);
+  const params = useParams();
 
-  if (!person) return <p>Loading...</p>
+  useEffect(() => {
+    const selectedPerson = people.find((person) => person.id.value === params.id);
+    setPerson(selectedPerson)
+  }, [people, params.id]);
+
+
+  if (!person) return <p>Loading...</p>;
 
   return (
     <article>
@@ -13,7 +22,7 @@ function PersonProfile(props) {
       </h2>
       <HireForm person={person} />
     </article>
-  )
+  );
 }
 
 export default PersonProfile
