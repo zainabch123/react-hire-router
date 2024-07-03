@@ -35,7 +35,7 @@ export default function App() {
         />
         <Route 
         path="/view/:id"
-        element={<PersonProfile people={people}/>} />
+        element={<PersonProfile people={people} hiredPeople={hiredPeople} setHiredPeople={setHiredPeople}/>} />
       </Routes>
     </>
   );
